@@ -228,8 +228,10 @@ h2 { font-size: 23px; line-height: 1.25; letter-spacing: -.02em; }
 }
 
 @media (max-width: 430px) {
-  .entry-dialog .form-two-col, .records-filter { grid-template-columns: 1fr; row-gap: 0; }
-  .entry-dialog .form-two-col .form-field + .form-field, .records-filter label + label { margin-top: 16px; }
+  .entry-dialog .form-two-col, .records-filter { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 12px; row-gap: 0; }
+  .entry-dialog .form-two-col .form-field + .form-field { margin-top: 18px; }
+  .records-filter label + label { margin-top: 0; }
+  .entry-dialog .form-field input, .entry-dialog .form-field select, .records-filter select { padding-left: 9px; padding-right: 9px; font-size: 14px; }
   .summary-chart { padding-top: 9px; }
   .summary-chart-head strong { font-size: 18px; }
   .summary-legend { gap: 10px; }
