@@ -196,6 +196,7 @@ h2 { font-size: 23px; line-height: 1.25; letter-spacing: -.02em; }
 .form-field { display: block; margin-top: 18px; }
 .form-field > span em { color: #aaa09b; font-style: normal; font-weight: 400; }
 .form-field input, .form-field select { width: 100%; min-width: 0; height: 47px; margin-top: 7px; padding: 0 12px; border: 1px solid #e3d2c5; border-radius: 14px; outline: 0; color: var(--ink); background: #fff; font-size: 15px; }
+.form-field input[type="date"] { max-width: 100%; overflow: hidden; text-overflow: clip; white-space: nowrap; }
 .form-field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, #a7958c 50%), linear-gradient(135deg, #a7958c 50%, transparent 50%); background-position: calc(100% - 17px) 20px, calc(100% - 12px) 20px; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
 .form-field[hidden], .transfer-target[hidden] { display: none; }
 .form-error { min-height: 22px; color: var(--expense-deep); font-size: 14px; line-height: 1.5; margin-top: 10px; }
@@ -237,6 +238,10 @@ h2 { font-size: 23px; line-height: 1.25; letter-spacing: -.02em; }
   .summary-legend { gap: 10px; }
   .summary-legend-item > span { font-size: 13px; }
   .summary-legend-item strong { font-size: clamp(15px, 5vw, 22px); }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .entry-dialog .form-field input[type="date"] { -webkit-appearance: none; appearance: none; min-width: 0; padding-left: 8px; padding-right: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
